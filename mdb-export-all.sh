@@ -18,7 +18,10 @@ dbname=${filename%.*}
 mkdir "$dbname"
 
 IFS=$'\n'
+
+echo "SET FOREIGN_KEY_CHECKS = 0;" > "$dbname/data.sql"
 for table in $(mdb-tables -1 "$fullfilename"); do
     echo "Export table $table"
-    mdb-export "$fullfilename" "$table" > "$dbname/$table.csv"
+    mdb-export --insert=mysql "$fullfilename" "$table" | sed -e 's/\\/\\\\/g' >> "$dbname/data.sql"
 done
+echo "SET FOREIGN_KEY_CHECKS = 1;" >> "$dbname/data.sql"
