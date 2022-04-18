@@ -1,16 +1,12 @@
-# mdb-export-all
+# mdb-export-all-mysql
 Export all of the tables from Microsoft Access database to MySQL
 
 # Requirements
 
-[mdbtools](https://github.com/brianb/mdbtools). There are packages for linux (`apt-get install mdbtools`) and macos (`brew install mdbtools`)
+[mdbtools](https://github.com/mdbtools/mdbtools).
 
 # Usage
 
 ```bash
 bash mdb-export-all.sh full-path-to-ms-access-db.accdb
 ```
-
-## Development
-
-Style guide: https://github.com/bahamas10/bash-style-guide
