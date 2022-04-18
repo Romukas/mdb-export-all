@@ -1,9 +1,9 @@
 # mdb-export-all-mysql
-Export all of the tables from Microsoft Access database to MySQL
+Export all tables from Microsoft Access database to MySQL compatible SQL
 
 # Requirements
 
-[mdbtools](https://github.com/mdbtools/mdbtools).
+[mdbtools](https://github.com/mdbtools/mdbtools)
 
 # Usage
 
